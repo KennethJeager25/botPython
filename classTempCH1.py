@@ -2,7 +2,7 @@ from guardatCH1 import jsonFile
 
 class temp_CH1(jsonFile):
 
-    def __init__(self,name="",value="",lista=()):
+    def __init__(self,name="",value="",lista=[]):
         super().__init__("temp_CH1.json")
         self.name = name
         self.value = value
@@ -24,6 +24,12 @@ class temp_CH1(jsonFile):
         except:
             return "no existen datos"
 
+    def showData(self):
+        try:
+            return self.lista
+        except:
+            return "lista vacia"
+
     def guardarDatos(self):
         json_data={}
         json_data['Temp_CH1']=[]
@@ -34,3 +40,7 @@ class temp_CH1(jsonFile):
             }
             json_data['Temp_CH1'].append(arreglo_Json)
         self.toJson(json_data)
+
+    def __str__(self):
+        return f"name:{self.name},value:{self.value}"
+    

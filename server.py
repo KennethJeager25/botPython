@@ -1,9 +1,11 @@
 from selenium import webdriver
 import time
-from selenium.webdriver.common.by import By
+from classTempCH1 import temp_CH1
 
 tank = ''
 value = 50
+
+ch1 = temp_CH1()
 
 class Bot:
 
@@ -119,9 +121,13 @@ class Bot:
 
         time.sleep(9)
 
+        tank = driver.find_element_by_xpath("/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[1]/ion-card/div[1]/ion-card-content/div[1]/div[1]/ion-card/ion-row[2]/ion-col[1]/div[1]/ion-label")
+        tank3 = tank.text.split('°')
+        tempCH1 = temp_CH1()
+        tempCH1.name = 'Tank:3'
+        tempCH1.value = tank3[0]
+        ch1.addCh1(tempCH1)
         
-
-
 
         
 
