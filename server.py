@@ -5,8 +5,6 @@ from classTempCH1 import temp_CH1
 tank = ''
 value = 50
 
-ch1 = temp_CH1()
-
 class Bot:
 
     def __init__(self,url='',navegador=''):
@@ -116,10 +114,6 @@ class Bot:
 
         driver.get(self.url)
 
-        time.sleep(1)
-
-        driver.refresh()
-
         time.sleep(9)
 
         tank = driver.find_element_by_xpath("/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[1]/ion-card/div[1]/ion-card-content/div[1]/div[1]/ion-card/ion-row[2]/ion-col[1]/div[1]/ion-label")
@@ -135,6 +129,8 @@ class Bot:
         tempCH1tank4.value = tank4[0]
         self.ch1.addCh1(tempCH1tank4)
         self.ch1.guardarDatos()
+        tank = driver.find_element_by_xpath("/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[3]/ion-card/div[1]/ion-card-content/div[1]/div[1]/ion-card/ion-row[2]/ion-col[1]/div[1]/ion-label")
+        print(tank.text)
 
         
 

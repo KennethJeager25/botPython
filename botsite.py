@@ -1,12 +1,13 @@
 from selenium import webdriver
 import time
-from pynput.keyboard import Key, Controller
 from selenium.webdriver.common.by import By
+from pynput.keyboard import Key, Controller
+
+keyboard = Controller()
 
 navegador = './chromedriver.exe'
 url='https://mypid.smartpid.com/mypid/'
 
-keyboard = Controller()
 
 driver = webdriver.Chrome(navegador)
 driver.get(url)
@@ -24,10 +25,7 @@ driver.execute_script("window.sessionStorage.setItem('MY_SESSION', 'ALREADY_PRES
 
 driver.get('https://mypid.smartpid.com/mypid/dashboard')
 
-driver.maximize_window()
+driver.find_element_by_xpath('//*[@id="myFixZone"]/ion-card-header/ion-toolbar/ion-grid/ion-row[1]/ion-col/ion-title').click()
 
-driver.refresh()
-
-driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-
+keyboard.press(Key.down)
 
