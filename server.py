@@ -12,6 +12,7 @@ class Bot:
     def __init__(self,url='',navegador=''):
         self.url = url
         self.navegador = navegador
+        self.ch1 = temp_CH1()
         
 
     def setTemp(self):
@@ -123,11 +124,17 @@ class Bot:
 
         tank = driver.find_element_by_xpath("/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[1]/ion-card/div[1]/ion-card-content/div[1]/div[1]/ion-card/ion-row[2]/ion-col[1]/div[1]/ion-label")
         tank3 = tank.text.split('°')
-        tempCH1 = temp_CH1()
-        tempCH1.name = 'Tank:3'
-        tempCH1.value = tank3[0]
-        ch1.addCh1(tempCH1)
-        
+        tempCH1tank3 = temp_CH1()
+        tempCH1tank3.name = 'Tank:3'
+        tempCH1tank3.value = tank3[0]
+        self.ch1.addCh1(tempCH1tank3)
+        tank = driver.find_element_by_xpath("/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[2]/ion-card/div[1]/ion-card-content/div[1]/div[1]/ion-card/ion-row[2]/ion-col[1]/div[1]/ion-label")
+        tank4 = tank.text.split('°')
+        tempCH1tank4 = temp_CH1()
+        tempCH1tank4.name = 'Tank:4'
+        tempCH1tank4.value = tank4[0]
+        self.ch1.addCh1(tempCH1tank4)
+        self.ch1.guardarDatos()
 
         
 

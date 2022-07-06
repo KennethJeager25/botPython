@@ -3,6 +3,10 @@
         {
             "name": "Tank:3",
             "value": "41.9 F"
+        },
+        {
+            "name": "Tank:4",
+            "value": "0.0 F"
         }
     ]
 }
