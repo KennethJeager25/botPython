@@ -128,31 +128,43 @@ class Bot:
 
         tank = driver.find_element_by_xpath("/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[1]/ion-card/div[1]/ion-card-content/div[1]/div[1]/ion-card/ion-row[2]/ion-col[1]/div[1]/ion-label")
         tank3 = tank.text.split('°')
+        tanksp = driver.find_element_by_xpath('//*[@id="myFixZone"]/ion-card-content/div[1]/div[1]/ion-card/ion-row[4]/ion-col[1]/div[1]/ion-label')
+        tankSp3 = tanksp.text.split('°')
         tempCH1tank3 = temp_CH1()
         tempCH1tank3.name = 'Tank:3'
         tempCH1tank3.value = tank3[0]
+        tempCH1tank3.sp = tankSp3[0]
         self.ch1.addCh1(tempCH1tank3)
         tank = driver.find_element_by_xpath("/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[2]/ion-card/div[1]/ion-card-content/div[1]/div[1]/ion-card/ion-row[2]/ion-col[1]/div[1]/ion-label")
         tank5 = tank.text.split('°')
+        tanksp = driver.find_element_by_xpath('/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[2]/ion-card/div[1]/ion-card-content/div[1]/div[1]/ion-card/ion-row[4]/ion-col[1]/div[1]/ion-label')
+        tankSp5 = tanksp.text.split('°')
         tempCH1tank5 = temp_CH1()
         tempCH1tank5.name = 'Tank:5'
         tempCH1tank5.value = tank5[0]
+        tempCH1tank5.sp = tankSp5[0]
         self.ch1.addCh1(tempCH1tank5)
         driver.find_element_by_xpath('//*[@id="myFixZone"]/ion-card-header/ion-toolbar/ion-buttons[1]/ion-button[1]').click()
         driver.find_element_by_xpath('//*[@id="myFixZone"]/ion-card-header/ion-toolbar/ion-buttons[1]/ion-button[3]').click()
         self.scrolldown()
-        time.sleep(3)
+        time.sleep(5)
         tank = driver.find_element_by_xpath("/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[3]/ion-card/div[1]/ion-card-content/div[1]/div[1]/ion-card/ion-row[2]/ion-col[1]/div[1]/ion-label")
         tank7 = tank.text.split('°')
+        tanksp = driver.find_element_by_xpath('/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[3]/ion-card/div[1]/ion-card-content/div[1]/div[1]/ion-card/ion-row[4]/ion-col[1]/div[1]/ion-label')
+        tankSp7 = tanksp.text.split('°')
         tempCH1tank7 = temp_CH1()
         tempCH1tank7.name = 'Tank:7'
         tempCH1tank7.value = tank7[0]
+        tempCH1tank7.sp = tankSp7[0]
         self.ch1.addCh1(tempCH1tank7)
         tank = driver.find_element_by_xpath("/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[4]/ion-card/div[1]/ion-card-content/div[1]/div[1]/ion-card/ion-row[2]/ion-col[1]/div[1]/ion-label")
         tank9 = tank.text.split('°')
+        tanksp = driver.find_element_by_xpath('/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[4]/ion-card/div[1]/ion-card-content/div[1]/div[1]/ion-card/ion-row[4]/ion-col[1]/div[1]/ion-label')
+        tankSp9 = tanksp.text.split('°')
         tempCH1tank9 = temp_CH1()
         tempCH1tank9.name = 'Tank:9'
         tempCH1tank9.value = tank9[0]
+        tempCH1tank9.sp = tankSp9[0]
         self.ch1.addCh1(tempCH1tank9)
         self.ch1.guardarDatos()
         time.sleep(3)
@@ -332,8 +344,8 @@ if __name__ == '__main__':
             botsito.setTemp()
         else:
             botsito.showTempCH1()
-            botsito.showTempCH2()
-            botsito.showSpCH1()
-            botsito.showSpCH2()
+            #botsito.showTempCH2()
+            #botsito.showSpCH1()
+            #botsito.showSpCH2()
     except KeyboardInterrupt:
         print ('Fin del programa')

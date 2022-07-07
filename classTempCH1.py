@@ -2,10 +2,11 @@ from guardatCH1 import jsonFile
 
 class temp_CH1(jsonFile):
 
-    def __init__(self,name="",value="",lista=[]):
+    def __init__(self,name="",value="",sp='',lista=[]):
         super().__init__("temp_CH1.json")
         self.name = name
         self.value = value
+        self.sp = sp
         self.namefile="temp_CH1.json"
         self.lista = lista
 
@@ -37,6 +38,7 @@ class temp_CH1(jsonFile):
             arreglo_Json={
                 'name':f'{x.name}',
                 'value':f'{x.value}',
+                'sp':f'{x.sp}',
             }
             json_data['Temp_CH1'].append(arreglo_Json)
         self.toJson(json_data)
