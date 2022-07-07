@@ -48,7 +48,7 @@ class temp_CH1(jsonFile):
 
     def ApiRequest(self):
         file = self.getDataJson()
-        for x in self.showData():
+        for x in file['Temp_CH1']:
             data = {
                 'name':x['name'],
                 'value':x['value'],
