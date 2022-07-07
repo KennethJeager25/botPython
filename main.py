@@ -2,6 +2,8 @@ from selenium import webdriver
 import time
 from classTempCH1 import temp_CH1
 from classTempCH2 import temp_CH2
+from classSpCH1 import sp_CH1
+from classSpCH2 import sp_CH2
 from pynput.keyboard import Key, Controller
 
 keyboard = Controller()
@@ -15,6 +17,8 @@ class Bot:
         self.navegador = navegador
         self.ch1 = temp_CH1()
         self.ch2 = temp_CH2()
+        self.sp1 = sp_CH1()
+        self.sp2 = sp_CH2()
         
 
     def setTemp(self):
@@ -189,6 +193,8 @@ class Bot:
         tempCH1tank6.name = 'Tank:6'
         tempCH1tank6.value = tank6[0]
         self.ch2.addCh2(tempCH1tank6)
+        driver.find_element_by_xpath('//*[@id="myFixZone"]/ion-card-header/ion-toolbar/ion-buttons[1]/ion-button[1]').click()
+        driver.find_element_by_xpath('//*[@id="myFixZone"]/ion-card-header/ion-toolbar/ion-buttons[1]/ion-button[3]').click()
         self.scrolldown()
         time.sleep(3)
         driver.find_element_by_xpath('/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[3]/ion-card/div[1]/ion-item-divider/div/div/ion-segment/ion-segment-button[2]').click()
@@ -207,7 +213,7 @@ class Bot:
         self.ch2.addCh2(tempCH1tank10)
         self.ch2.guardarDatos()
 
-    def showSpTempCH1(self):
+    def showSpCH1(self):
         self.navegador = './chromedriver.exe'
         self.url='https://mypid.smartpid.com/mypid/'
 
@@ -231,7 +237,83 @@ class Bot:
 
         time.sleep(9)
 
+        tank = driver.find_element_by_xpath('//*[@id="myFixZone"]/ion-card-content/div[1]/div[1]/ion-card/ion-row[4]/ion-col[1]/div[1]/ion-label')
+        tankSp3 = tank.text.split('°')
+        tempSp1tank3 = sp_CH1()
+        tempSp1tank3.name = 'Tank:3'
+        tempSp1tank3.sp = tankSp3[0]
+        self.sp1.addSp1(tempSp1tank3)
+        tank = driver.find_element_by_xpath('/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[2]/ion-card/div[1]/ion-card-content/div[1]/div[1]/ion-card/ion-row[4]/ion-col[1]/div[1]/ion-label')
+        tankSp5 = tank.text.split('°')
+        tempSp1tank5 = sp_CH1()
+        tempSp1tank5.name = 'Tank:5'
+        tempSp1tank5.sp = tankSp5[0]
+        self.sp1.addSp1(tempSp1tank5)
+        driver.find_element_by_xpath('//*[@id="myFixZone"]/ion-card-header/ion-toolbar/ion-buttons[1]/ion-button[1]').click()
+        driver.find_element_by_xpath('//*[@id="myFixZone"]/ion-card-header/ion-toolbar/ion-buttons[1]/ion-button[3]').click()
+        self.scrolldown()
+        time.sleep(3)
+        tank = driver.find_element_by_xpath('/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[3]/ion-card/div[1]/ion-card-content/div[1]/div[1]/ion-card/ion-row[4]/ion-col[1]/div[1]/ion-label')
+        tankSp7 = tank.text.split('°')
+        tempSp1tank7 = sp_CH1()
+        tempSp1tank7.name = 'Tank:7'
+        tempSp1tank7.sp = tankSp7[0]
+        self.sp1.addSp1(tempSp1tank7)
+        tank = driver.find_element_by_xpath('/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[4]/ion-card/div[1]/ion-card-content/div[1]/div[1]/ion-card/ion-row[4]/ion-col[1]/div[1]/ion-label')
+        tankSp9 = tank.text.split('°')
+        tempSp1tank9 = sp_CH1()
+        tempSp1tank9.name = 'Tank:9'
+        tempSp1tank9.sp = tankSp9[0]
+        self.sp1.addSp1(tempSp1tank9)
+        self.sp1.guardarDatos()
+
+    def showSpCH2(self):
+        self.navegador = './chromedriver.exe'
+        self.url='https://mypid.smartpid.com/mypid/'
+
+        driver = webdriver.Chrome(self.navegador)
+        driver.get(self.url)
+
+        driver.find_element_by_xpath('//*[@id="sign-in-container"]/ion-grid/ion-row[1]/ion-col/ion-list/ion-item[1]/ion-input/input').send_keys('marrito@me.com')
+        driver.find_element_by_xpath('//*[@id="sign-in-container"]/ion-grid/ion-row[1]/ion-col/ion-list/ion-item[2]/ion-input/input').send_keys('goodbeer#2022')
+        driver.find_element_by_xpath('//*[@id="sign-in-container"]/ion-grid/ion-row[2]/ion-col/ion-button').click()
+
+        self.url='https://mypid.smartpid.com/mypid/dashboard'
+        driver.refresh()
+
+        driver.execute_script("window.localStorage.setItem('EMAIL', 'marrito@me.com')")
+        driver.execute_script("window.sessionStorage.setItem('MY_PASSWORD', 'goodbeer#2022')")
+        driver.execute_script("window.sessionStorage.setItem('MY_SESSION', 'ALREADY_PRESENT')")
+
+        driver.get(self.url)
+
+        time.sleep(9)
+
+        driver.find_element_by_xpath('//*[@id="myFixZone"]/ion-item-divider/div/div/ion-segment/ion-segment-button[2]').click()
+        tank = driver.find_element_by_xpath("/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[1]/ion-card/div[1]/ion-card-content/div[1]/div[1]/ion-card/ion-row[4]/ion-col[1]/div[2]/ion-label")
+        tanksp4 = tank.text.split('°')
+        tempSp2tank4 = sp_CH2()
+        tempSp2tank4.name = 'Tank:4'
+        tempSp2tank4.sp = tanksp4[0]
+        self.sp2.addSp2(tempSp2tank4)
+        driver.find_element_by_xpath('/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[2]/ion-card/div[1]/ion-item-divider/div/div/ion-segment/ion-segment-button[2]').click()
+        tank = driver.find_element_by_xpath('/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[2]/ion-card/div[1]/ion-card-content/div[1]/div[1]/ion-card/ion-row[4]/ion-col[1]/div[2]/ion-label')
+        tanksp6 = tank.text.split('°')
+        tempSp2tank6 = sp_CH2()
+        tempSp2tank6.name = 'Tank:6'
+        tempSp2tank6.sp = tanksp6[0]
+        self.sp2.addSp2(tempSp2tank6)
+        self.sp2.guardarDatos()
+
+
+
+
+
+
+
         
+
+
 
 
 
@@ -251,5 +333,7 @@ if __name__ == '__main__':
         else:
             botsito.showTempCH1()
             botsito.showTempCH2()
+            botsito.showSpCH1()
+            botsito.showSpCH2()
     except KeyboardInterrupt:
         print ('Fin del programa')
