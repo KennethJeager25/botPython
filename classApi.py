@@ -26,8 +26,8 @@ class Api:
     def getstatus(self):
 
         status = requests.get('https://dev.synerboard.com/serverBeer/rest/smartFinal/GetSet')
-        if status.status_code == 200:
-            response = status.text
-            return response
+        return status.text
+
+
 
         

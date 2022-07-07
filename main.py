@@ -260,20 +260,19 @@ class Bot:
         self.ch2.ApiRequest()
 
     def getstatus(self):
-        self.api.getstatus()
+       prueba =  self.api.getstatus()
+       return prueba
 
 
 
 if __name__ == '__main__':
-    validacion = 2
     botsito = Bot()
     try:
-        if validacion == 1:
+        if botsito.getstatus() == 'false':
             botsito.setTemp()
         else:
-            #botsito.showTempCH1()
-            #botsito.showTempCH2()
-            #botsito.metodoApi()
-            print(botsito.getstatus())
+            botsito.showTempCH1()
+            botsito.showTempCH2()
+            botsito.metodoApi()
     except KeyboardInterrupt:
         print ('Fin del programa')
