@@ -1,4 +1,5 @@
 from guardarCH2 import jsonFile
+from classApi import Api
 
 class temp_CH2(jsonFile):
 
@@ -9,6 +10,7 @@ class temp_CH2(jsonFile):
         self.sp = sp
         self.namefile="temp_CH2.json"
         self.lista = lista
+        self.api = Api()
 
     def addCh2(self,temp):
         try:
@@ -42,6 +44,17 @@ class temp_CH2(jsonFile):
             }
             json_data['Temp_CH2'].append(arreglo_Json)
         self.toJson(json_data)
+
+
+    def ApiRequest(self):
+        file = self.getDataJson()
+        for x in file['Temp_CH2']:
+            data = {
+                'name':x['name'],
+                'value':x['value'],
+                'sp':x['sp'],
+            }
+            self.api.metodoPost(data)
 
     def __str__(self):
         return f"name:{self.name},value:{self.value}"

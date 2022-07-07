@@ -1,3 +1,4 @@
+from urllib import response
 import requests
 from requests.structures import CaseInsensitiveDict
 import json
@@ -7,15 +8,13 @@ class Api:
 
     def __init__(self):
         self.urlPost = 'https://dev.synerboard.com/serverBeer/rest/smartFinal/addSmart'
-        self.urlGet = 'https://dev.synerboard.com/serverBeer/rest/smartFinal/getSmart'
         self.urlDelete = 'https://dev.synerboard.com/serverBeer/rest/smartFinal/deleteAll'
-        self.urlUpdate = 'https://dev.synerboard.com/serverBeer/rest/smartFinal/updateSmart'
 
     def metodoPost(self,request):
         headers = CaseInsensitiveDict()
         headers["Accept"] = "application/json"
-        response = requests.post(self.urlPost,request)
-        return response.json()
+        response = requests.post(self.urlPost,json=request)
+        return response.text
 
     def metodoDelete(self):
         try:
@@ -23,4 +22,12 @@ class Api:
             return response.json()
         except:
             return "ocurrio un error"
+
+    def getstatus(self):
+
+        status = requests.get('https://dev.synerboard.com/serverBeer/rest/smartFinal/GetSet')
+        if status.status_code == 200:
+            response = status.text
+            return response
+
         

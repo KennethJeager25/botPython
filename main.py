@@ -45,33 +45,33 @@ class Bot:
 
         time.sleep(5)
 
-        if tank == 'Tank:3':
+        if tank == 'Tank 3':
             driver.find_element_by_xpath('//*[@id="myFixZone"]/ion-card-header/ion-toolbar/ion-buttons[1]/ion-button[1]').click()
             driver.find_element_by_xpath('//*[@id="myFixZone"]/ion-card-content/div[2]/div[1]/ion-card[1]/ion-grid/ion-row[2]/ion-col[1]/ion-item/ion-input/input').send_keys(value)
             driver.find_element_by_xpath('//*[@id="myFixZone"]/ion-card-content/div[2]/div[1]/ion-card[1]/ion-grid/ion-row[2]/ion-col[3]/ion-button/small').click()
             time.sleep(3)
             driver.find_element_by_xpath('//*[@id="myFixZone"]/ion-card-header/ion-toolbar/ion-buttons[1]/ion-button[3]').click()
-        if tank == 'Tank:4':
+        if tank == 'Tank 4':
             driver.find_element_by_xpath('//*[@id="myFixZone"]/ion-item-divider/div/div/ion-segment/ion-segment-button[2]').click()
             driver.find_element_by_xpath('//*[@id="myFixZone"]/ion-card-header/ion-toolbar/ion-buttons[1]/ion-button[1]').click()
             driver.find_element_by_xpath('//*[@id="myFixZone"]/ion-card-content/div[2]/div[1]/ion-card[1]/ion-grid/ion-row[2]/ion-col[1]/ion-item/ion-input/input').send_keys(value)
             driver.find_element_by_xpath('//*[@id="myFixZone"]/ion-card-content/div[2]/div[1]/ion-card[1]/ion-grid/ion-row[2]/ion-col[3]/ion-button/small').click()
             time.sleep(3)
             driver.find_element_by_xpath('//*[@id="myFixZone"]/ion-card-header/ion-toolbar/ion-buttons[1]/ion-button[3]').click()
-        if tank == 'Tank:5':
+        if tank == 'Tank 5':
             driver.find_element_by_xpath('/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[2]/ion-card/div[1]/ion-card-header/ion-toolbar/ion-buttons[1]/ion-button[1]').click()
             driver.find_element_by_xpath('/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[2]/ion-card/div[1]/ion-card-content/div[2]/div[1]/ion-card[1]/ion-grid/ion-row[2]/ion-col[1]/ion-item/ion-input/input').send_keys(value)
             driver.find_element_by_xpath('/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[2]/ion-card/div[1]/ion-card-content/div[2]/div[1]/ion-card[1]/ion-grid/ion-row[2]/ion-col[3]/ion-button/small').click()
             time.sleep(3)
             driver.find_element_by_xpath('/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[2]/ion-card/div[1]/ion-card-header/ion-toolbar/ion-buttons[1]/ion-button[3]').click()
-        if tank == 'Tank:6':
+        if tank == 'Tank 6':
             driver.find_element_by_xpath('/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[2]/ion-card/div[1]/ion-item-divider/div/div/ion-segment/ion-segment-button[2]').click()
             driver.find_element_by_xpath('/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[2]/ion-card/div[1]/ion-card-header/ion-toolbar/ion-buttons[1]/ion-button[1]').click()
             driver.find_element_by_xpath('/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[2]/ion-card/div[1]/ion-card-content/div[2]/div[1]/ion-card[1]/ion-grid/ion-row[2]/ion-col[1]/ion-item/ion-input/input').send_keys(value)
             time.sleep(3)
             driver.find_element_by_xpath('/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[2]/ion-card/div[1]/ion-card-content/div[2]/div[1]/ion-card[1]/ion-grid/ion-row[2]/ion-col[3]/ion-button/small').click()
             driver.find_element_by_xpath('/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[2]/ion-card/div[1]/ion-card-header/ion-toolbar/ion-buttons[1]/ion-button[3]').click()
-        if tank == 'Tank:7':
+        if tank == 'Tank 7':
             driver.find_element_by_xpath('//*[@id="myFixZone"]/ion-card-header/ion-toolbar/ion-buttons[1]/ion-button[1]').click()
             driver.find_element_by_xpath('//*[@id="myFixZone"]/ion-card-header/ion-toolbar/ion-buttons[1]/ion-button[3]').click()
             self.scrolldown()
@@ -81,7 +81,7 @@ class Bot:
             time.sleep(3)
             driver.find_element_by_xpath('/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[3]/ion-card/div[1]/ion-card-content/div[2]/div[1]/ion-card[1]/ion-grid/ion-row[2]/ion-col[3]/ion-button/small').click()
             driver.find_element_by_xpath('/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[3]/ion-card/div[1]/ion-card-header/ion-toolbar/ion-buttons[1]/ion-button[3]').click()
-        if tank == 'Tank:8':
+        if tank == 'Tank 8':
             driver.find_element_by_xpath('//*[@id="myFixZone"]/ion-card-header/ion-toolbar/ion-buttons[1]/ion-button[1]').click()
             driver.find_element_by_xpath('//*[@id="myFixZone"]/ion-card-header/ion-toolbar/ion-buttons[1]/ion-button[3]').click()
             self.scrolldown()
@@ -92,7 +92,7 @@ class Bot:
             time.sleep(3)
             driver.find_element_by_xpath('/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[3]/ion-card/div[1]/ion-card-content/div[2]/div[1]/ion-card[1]/ion-grid/ion-row[2]/ion-col[3]/ion-button/small').click()
             driver.find_element_by_xpath('/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[3]/ion-card/div[1]/ion-card-header/ion-toolbar/ion-buttons[1]/ion-button[3]').click()
-        if tank == 'Tank:9':
+        if tank == 'Tank 9':
             driver.find_element_by_xpath('//*[@id="myFixZone"]/ion-card-header/ion-toolbar/ion-buttons[1]/ion-button[1]').click()
             driver.find_element_by_xpath('//*[@id="myFixZone"]/ion-card-header/ion-toolbar/ion-buttons[1]/ion-button[3]').click()
             self.scrolldown()
@@ -102,7 +102,7 @@ class Bot:
             time.sleep(3)
             driver.find_element_by_xpath('/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[4]/ion-card/div[1]/ion-card-content/div[2]/div[1]/ion-card[1]/ion-grid/ion-row[2]/ion-col[3]/ion-button/small').click()
             driver.find_element_by_xpath('/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[4]/ion-card/div[1]/ion-card-header/ion-toolbar/ion-buttons[1]/ion-button[3]').click()
-        if tank == 'Tank:10':
+        if tank == 'Tank 10':
             driver.find_element_by_xpath('//*[@id="myFixZone"]/ion-card-header/ion-toolbar/ion-buttons[1]/ion-button[1]').click()
             driver.find_element_by_xpath('//*[@id="myFixZone"]/ion-card-header/ion-toolbar/ion-buttons[1]/ion-button[3]').click()
             self.scrolldown()
@@ -143,7 +143,7 @@ class Bot:
         tanksp = driver.find_element_by_xpath('//*[@id="myFixZone"]/ion-card-content/div[1]/div[1]/ion-card/ion-row[4]/ion-col[1]/div[1]/ion-label')
         tankSp3 = tanksp.text.split('°')
         tempCH1tank3 = temp_CH1()
-        tempCH1tank3.name = 'Tank:3'
+        tempCH1tank3.name = 'Tank 3'
         tempCH1tank3.value = tank3[0]
         tempCH1tank3.sp = tankSp3[0]
         self.ch1.addCh1(tempCH1tank3)
@@ -152,7 +152,7 @@ class Bot:
         tanksp = driver.find_element_by_xpath('/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[2]/ion-card/div[1]/ion-card-content/div[1]/div[1]/ion-card/ion-row[4]/ion-col[1]/div[1]/ion-label')
         tankSp5 = tanksp.text.split('°')
         tempCH1tank5 = temp_CH1()
-        tempCH1tank5.name = 'Tank:5'
+        tempCH1tank5.name = 'Tank 5'
         tempCH1tank5.value = tank5[0]
         tempCH1tank5.sp = tankSp5[0]
         self.ch1.addCh1(tempCH1tank5)
@@ -165,7 +165,7 @@ class Bot:
         tanksp = driver.find_element_by_xpath('/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[3]/ion-card/div[1]/ion-card-content/div[1]/div[1]/ion-card/ion-row[4]/ion-col[1]/div[1]/ion-label')
         tankSp7 = tanksp.text.split('°')
         tempCH1tank7 = temp_CH1()
-        tempCH1tank7.name = 'Tank:7'
+        tempCH1tank7.name = 'Tank 7'
         tempCH1tank7.value = tank7[0]
         tempCH1tank7.sp = tankSp7[0]
         self.ch1.addCh1(tempCH1tank7)
@@ -174,7 +174,7 @@ class Bot:
         tanksp = driver.find_element_by_xpath('/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[4]/ion-card/div[1]/ion-card-content/div[1]/div[1]/ion-card/ion-row[4]/ion-col[1]/div[1]/ion-label')
         tankSp9 = tanksp.text.split('°')
         tempCH1tank9 = temp_CH1()
-        tempCH1tank9.name = 'Tank:9'
+        tempCH1tank9.name = 'Tank 9'
         tempCH1tank9.value = tank9[0]
         tempCH1tank9.sp = tankSp9[0]
         self.ch1.addCh1(tempCH1tank9)
@@ -209,7 +209,7 @@ class Bot:
         tanksp = driver.find_element_by_xpath("/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[1]/ion-card/div[1]/ion-card-content/div[1]/div[1]/ion-card/ion-row[4]/ion-col[1]/div[2]/ion-label")
         tanksp4 = tanksp.text.split('°')
         tempCH2tank4 = temp_CH2()
-        tempCH2tank4.name = 'Tank:4'
+        tempCH2tank4.name = 'Tank 4'
         tempCH2tank4.value = tank4[0]
         tempCH2tank4.sp = tanksp4[0]
         self.ch2.addCh2(tempCH2tank4)
@@ -219,7 +219,7 @@ class Bot:
         tanksp = driver.find_element_by_xpath('/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[2]/ion-card/div[1]/ion-card-content/div[1]/div[1]/ion-card/ion-row[4]/ion-col[1]/div[2]/ion-label')
         tanksp6 = tanksp.text.split('°')
         tempCH2tank6 = temp_CH2()
-        tempCH2tank6.name = 'Tank:6'
+        tempCH2tank6.name = 'Tank 6'
         tempCH2tank6.value = tank6[0]
         tempCH2tank6.sp = tanksp6[0]
         self.ch2.addCh2(tempCH2tank6)
@@ -233,7 +233,7 @@ class Bot:
         tanksp = driver.find_element_by_xpath('/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[3]/ion-card/div[1]/ion-card-content/div[1]/div[1]/ion-card/ion-row[4]/ion-col[1]/div[2]/ion-label')
         tanksp8 = tanksp.text.split('°')
         tempCH2tank8 = temp_CH2()
-        tempCH2tank8.name = 'Tank:8'
+        tempCH2tank8.name = 'Tank 8'
         tempCH2tank8.value = tank8[0]
         tempCH2tank8.sp = tanksp8[0]
         self.ch2.addCh2(tempCH2tank8)
@@ -243,7 +243,7 @@ class Bot:
         tanksp = driver.find_element_by_xpath('/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[4]/ion-card/div[1]/ion-card-content/div[1]/div[1]/ion-card/ion-row[4]/ion-col[1]/div[2]/ion-label')
         tanksp10 = tanksp.text.split('°')
         tempCH2tank10 = temp_CH2()
-        tempCH2tank10.name = 'Tank:10'
+        tempCH2tank10.name = 'Tank 10'
         tempCH2tank10.value = tank10[0]
         tempCH2tank10.sp = tanksp10[0]
         self.ch2.addCh2(tempCH2tank10)
@@ -257,6 +257,11 @@ class Bot:
     def metodoApi(self):
         self.api.metodoDelete()
         self.ch1.ApiRequest()
+        self.ch2.ApiRequest()
+
+    def getstatus(self):
+        self.api.getstatus()
+
 
 
 if __name__ == '__main__':
@@ -266,8 +271,9 @@ if __name__ == '__main__':
         if validacion == 1:
             botsito.setTemp()
         else:
-            botsito.showTempCH1()
-            botsito.showTempCH2()
-            botsito.metodoApi()
+            #botsito.showTempCH1()
+            #botsito.showTempCH2()
+            #botsito.metodoApi()
+            print(botsito.getstatus())
     except KeyboardInterrupt:
         print ('Fin del programa')
