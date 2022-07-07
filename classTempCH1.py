@@ -1,4 +1,5 @@
 from guardatCH1 import jsonFile
+from classApi import Api
 
 class temp_CH1(jsonFile):
 
@@ -9,6 +10,7 @@ class temp_CH1(jsonFile):
         self.sp = sp
         self.namefile="temp_CH1.json"
         self.lista = lista
+        self.api = Api()
 
     def addCh1(self,temp):
         try:
@@ -43,6 +45,21 @@ class temp_CH1(jsonFile):
             json_data['Temp_CH1'].append(arreglo_Json)
         self.toJson(json_data)
 
+
+    def ApiRequest(self):
+        file = self.getDataJson()
+        for x in self.showData():
+            data = {
+                'name':x['name'],
+                'value':x['value'],
+                'sp':x['sp'],
+            }
+            self.api.metodoPost(data)
+    
+
     def __str__(self):
         return f"name:{self.name},value:{self.value}"
+
+
+    
     

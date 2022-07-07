@@ -2,6 +2,7 @@ from selenium import webdriver
 import time
 from classTempCH1 import temp_CH1
 from classTempCH2 import temp_CH2
+from classApi import Api
 from pynput.keyboard import Key, Controller
 
 keyboard = Controller()
@@ -15,6 +16,7 @@ class Bot:
         self.navegador = navegador
         self.ch1 = temp_CH1()
         self.ch2 = temp_CH2()
+        self.api = Api()
         
 
     def setTemp(self):
@@ -111,8 +113,6 @@ class Bot:
             time.sleep(3)
             driver.find_element_by_xpath('/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[4]/ion-card/div[1]/ion-card-content/div[2]/div[1]/ion-card[1]/ion-grid/ion-row[2]/ion-col[3]/ion-button/small').click()
             driver.find_element_by_xpath('/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[4]/ion-card/div[1]/ion-card-header/ion-toolbar/ion-buttons[1]/ion-button[3]').click()
-
-
 
     def showTempCH1(self):
         self.navegador = './chromedriver.exe'
@@ -249,16 +249,18 @@ class Bot:
         self.ch2.addCh2(tempCH2tank10)
         self.ch2.guardarDatos()
 
-
     def scrolldown(self):
         for j in range(14):
             keyboard.press(Key.down)
             keyboard.release(Key.down)
 
+    def metodoApi(self):
+        self.api.metodoDelete()
+        self.ch1.ApiRequest()
 
 
 if __name__ == '__main__':
-    validacion = 1
+    validacion = 2
     botsito = Bot()
     try:
         if validacion == 1:
@@ -266,5 +268,6 @@ if __name__ == '__main__':
         else:
             botsito.showTempCH1()
             botsito.showTempCH2()
+            botsito.metodoApi()
     except KeyboardInterrupt:
         print ('Fin del programa')
