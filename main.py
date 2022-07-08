@@ -6,8 +6,6 @@ from classApi import Api
 from pynput.keyboard import Key, Controller
 
 keyboard = Controller()
-tank = 'tank:9'
-value = 50
 
 class Bot:
 
@@ -19,7 +17,7 @@ class Bot:
         self.api = Api()
         
 
-    def setTemp(self):
+    def setTemp(self,tank,value):
         self.navegador = './chromedriver.exe'
         self.url='https://mypid.smartpid.com/mypid/'
 
@@ -263,13 +261,28 @@ class Bot:
        prueba =  self.api.getstatus()
        return prueba
 
+    def getTank(self):
+        tank = ''
+        for value in self.api.getUpdate():
+            tank = value['name']
+        return tank
+
+    def gatValue(self):
+        value = ''
+        for item in self.api.getUpdate():
+            value = item['sp']
+        return value
+
 
 
 if __name__ == '__main__':
     botsito = Bot()
     try:
-        if botsito.getstatus() == 'false':
-            botsito.setTemp()
+        if botsito.getstatus() == 'true':
+            botsito.setTemp(botsito.getTank(),botsito.gatValue())
+            botsito.showTempCH1()
+            botsito.showTempCH2()
+            botsito.metodoApi()
         else:
             botsito.showTempCH1()
             botsito.showTempCH2()

@@ -28,6 +28,11 @@ class Api:
         status = requests.get('https://dev.synerboard.com/serverBeer/rest/smartFinal/GetSet')
         return status.text
 
+    def getUpdate(self):
+
+        getData = requests.get('https://dev.synerboard.com/serverBeer/rest/smartFinal/GetUpdate')
+        return getData.json()
+
 
 
         
