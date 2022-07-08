@@ -322,7 +322,7 @@ class Bot:
                 self.api.metodoDelete()
                 self.showTempCH1()
                 self.showTempCH2()
-                self.metodoApi() 
+                self.metodoApi()
             else:
                 self.showTempCH1()
                 self.showTempCH2()
@@ -341,5 +341,5 @@ class Bot:
 
 if __name__ == '__main__':
     botsito = Bot()
-    #botsito.init()
+    botsito.init()
     #botsito.ciclo()
