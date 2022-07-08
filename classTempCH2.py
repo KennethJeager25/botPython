@@ -20,12 +20,7 @@ class temp_CH2(jsonFile):
             return "error al guardar"
 
     def deleteAllTemp(self):
-        try:
-            for i in self.lista:
-                self.lista.remove(i)
-            return "datos eliminados"
-        except:
-            return "no existen datos"
+        self.lista = []
 
     def showData(self):
         try:

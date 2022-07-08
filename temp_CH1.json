@@ -2,7 +2,7 @@
     "Temp_CH1": [
         {
             "name": "Tank 1",
-            "value": "43.3 F",
+            "value": "N.A.",
             "sp": "N.A."
         },
         {
@@ -22,7 +22,7 @@
         },
         {
             "name": "Tank 9",
-            "value": "83.5 F",
+            "value": "82.2 F",
             "sp": "N.A."
         }
     ]
