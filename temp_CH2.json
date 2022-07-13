@@ -2,28 +2,28 @@
     "Temp_CH2": [
         {
             "name": "Tank 2",
-            "value": "43.3 F",
+            "value": "N.A.",
             "sp": "N.A."
         },
         {
             "name": "Tank 4",
-            "value": "43.0 F",
-            "sp": "N.A."
+            "value": "37.6 F",
+            "sp": "72.0 F"
         },
         {
             "name": "Tank 6",
-            "value": "43.2 F",
-            "sp": "N.A."
+            "value": "35.2 F",
+            "sp": "104.0 F"
         },
         {
             "name": "Tank 8",
-            "value": "43.2 F",
-            "sp": "N.A."
+            "value": "40.3 F",
+            "sp": "104.0 F"
         },
         {
             "name": "Tank 10",
-            "value": "43.3 F",
-            "sp": "N.A."
+            "value": "38.3 F",
+            "sp": "104.0 F"
         }
     ]
 }
